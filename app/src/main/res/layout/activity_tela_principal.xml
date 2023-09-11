@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TelaPrincipal">
+
+    <View
+        android:id="@+id/container_user"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintTop_toTopOf="@id/container_user"
+        app:layout_constraintStart_toStartOf="@id/container_user"
+        app:layout_constraintEnd_toEndOf="@id/container_user"
+        app:layout_constraintBottom_toBottomOf="@id/container_user"/>
+
+    <ImageView
+        android:id="@+id/icone_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintTop_toBottomOf="@id/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/text_nome_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Mateus Teixeira"
+        app:layout_constraintTop_toBottomOf="@id/container_user"
+        app:layout_constraintStart_toEndOf="@id/icone_user"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:id="@+id/icone_email"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintTop_toBottomOf="@id/icone_user"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/text_email_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="contato@teteu.dev.br"
+        app:layout_constraintTop_toBottomOf="@id/text_nome_usuario"
+        app:layout_constraintStart_toEndOf="@id/icone_email"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_deslogar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:text="Deslogar"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/text_email_usuario"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
